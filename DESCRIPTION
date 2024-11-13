@@ -1,0 +1,11 @@
+Package: combinedkriging
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Build a combination of Kriging models with random length-scales for Bayesian optimization
+Imports: copula, DiceKriging, nestedKriging
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
