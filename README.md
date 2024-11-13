@@ -18,8 +18,9 @@ devtools::install_github("TAppriou/combinedkriging")
 It requires the following dependencies:
 
 - `DiceKriging` : available in the CRAN
+- `copula` : available in the CRAN
 ``` r
-install.package("DiceKriging")
+install.package(c("DiceKriging","copula"))
 ```
 - `nestedKriging` : available at https://github.com/drulliere/nestedKriging
 
