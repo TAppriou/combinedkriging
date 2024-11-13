@@ -27,6 +27,8 @@ install.package("DiceKriging")
 
 ``` r
 
+library(combinedkriging)
+
 ### An example for the 10D sphere function ###
 
 # Test function: Sphere function
