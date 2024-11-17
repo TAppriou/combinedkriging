@@ -13,9 +13,9 @@ combined_krg(X_train, Y_train, theta_list, kernel="matern5_2", estim_mean=TRUE, 
   \item{theta_list}{A matrix containing the length-scales of each sub-model. The ith row contains the d length-scales for the ith sub-model.}
   \item{kernel}{The type of covariance kernel used. The choices are Matérn 5/2 "\code{matern5_2}", Matérn 3/2 "\code{matern3_2}", square exponential "\code{gauss}", or exponential "\code{exp}".}
   \item{theta_init}{An optional vector containing the initial values of the length-scales for the MLE optimization.}
-  \item{estim_mean}{Do we use a non-zero constant trend? Default value is \code{TRUE}}.
+  \item{estim_mean}{Do we use a non-zero constant trend? Default value is \code{TRUE}.}
   \item{nugget}{Optional nugget added to the diagonal of the correlation matrix.}
-  \item{n_tree_levels}{Number of levels in the binary tree for the combination. The corresponding number of sub-models is \code{2^(n_tree_levels - 1)}.}
+  \item{n_tree_levels}{For \code{weighting_method=="binLOO"}, number of levels in the binary tree for the combination. The corresponding number of sub-models is \code{2^(n_tree_levels - 1)}.}
   \item{weighting_method}{Weightinh method for the combination of sub-models. The choices are MoE "\code{MoE}", PoE "\code{PoE}", gPoE "\code{gPoE}", LOOCV "\code{LOO}", diagonal LOOCV "\code{diagLOO}", and binary LOOCV "\code{binLOO}" (default method).}
 }
 \value{
