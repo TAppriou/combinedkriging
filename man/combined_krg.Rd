@@ -5,7 +5,7 @@
 Build the combination of Kriging sub-models with fixed length-scales.
 }
 \usage{
-combined_krg(X_train, Y_train, theta_list, kernel="matern5_2", estim_mean=TRUE, nugget=0, n_tree_levels, weighting_method="binLOO")
+combined_krg(X_train, Y_train, theta_list, kernel="matern5_2", estim_mean=TRUE, nugget=0, n_tree_levels=NULL, weighting_method="binLOO")
 }
 \arguments{
   \item{X_train}{The training points. The ith row contains the d input variables corresponding to the ith observation.}
