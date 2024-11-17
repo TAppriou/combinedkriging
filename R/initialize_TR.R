@@ -7,7 +7,7 @@ initialize_TR <- function(d, X_train, Y_train, TR_type="TREGO") {
   TR$expand_factor <- 2
   TR$contract_factor <- 0.5
   TR$length_TR <- 0.8
-  TR$length_max <- Inf
+  TR$length_max <- 0.8
   TR$length_min <- 2^-7
   TR$bestVal <- min(Y_train)
   TR$center_TR <- X_train[which.min(Y_train),]
