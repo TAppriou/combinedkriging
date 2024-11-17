@@ -1,4 +1,4 @@
-combined_krg <- function(X_train, Y_train, theta_list, kernel="matern5_2", estim_mean=TRUE, nugget=0, n_tree_levels, weighting_method="binLOO") {
+combined_krg <- function(X_train, Y_train, theta_list, kernel="matern5_2", estim_mean=TRUE, nugget=0, n_tree_levels=NULL, weighting_method="binLOO") {
 
   model <- list()
 
@@ -7,11 +7,19 @@ combined_krg <- function(X_train, Y_train, theta_list, kernel="matern5_2", estim
   model$estim_mean <- estim_mean
   model$d <- dim(X_train)[2]
   n_train <- dim(X_train)[1]
-  n_comb_max <- dim(theta_list)[1]
   model$n_train <- n_train
   model$X_train <- X_train
   model$Y_train <- Y_train
+
+  if (weighting_method=="binLOO") {
+    n_comb_max <- 2^(n_tree_levels-1)
+  } else {
+    n_comb_max <- dim(theta_list)[1]
+  }
   model$n_tree_levels <- n_tree_levels
+  model$n_comb_max <- n_comb_max
+  model$theta_list <- theta_list
+  
   model$n_comb_max <- n_comb_max
   model$theta_list <- theta_list
   model$K <- array(0,c(n_train,n_train,n_comb_max))
